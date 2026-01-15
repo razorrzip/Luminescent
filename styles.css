@@ -150,45 +150,51 @@ nav {
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background: linear-gradient(135deg, rgba(7, 59, 76, 0.9), rgba(17, 138, 178, 0.8)), 
+                url('https://source.unsplash.com/random/1920x1080/?candle,aromatherapy') no-repeat center center/cover;
     display: flex;
     align-items: center;
-    padding: 0 5%;
-    margin-top: 80px;
+    text-align: center;
+    color: var(--white);
+    padding: 0 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 30%, rgba(255, 107, 107, 0.2) 0%, transparent 30%),
+                radial-gradient(circle at 80% 70%, rgba(78, 205, 196, 0.2) 0%, transparent 30%);
+    z-index: 1;
 }
 
 .hero-content {
-    max-width: 600px;
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .hero h1 {
     font-size: 3.5rem;
     margin-bottom: 1.5rem;
-    color: #2c3e50;
-    line-height: 1.2;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    color: #555;
-}
-
-.cta-button {
-    display: inline-block;
-    background-color: #4a6fa5;
-    color: white;
-    padding: 0.8rem 2rem;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: all 0.3s ease;
-}
-
-.cta-button:hover {
-    background-color: #3a5a80;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    font-weight: 700;
 }
 
 .hero p {
@@ -238,91 +244,83 @@ nav {
 
 /* Products Section */
 .products {
-    padding: 5rem 5%;
-    background-color: #fff;
+    padding: 100px 0;
+    background-color: var(--light-bg);
 }
 
-.products h2 {
+.products h2,
+.benefits h2,
+.contact h2,
+.about h2 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    color: #2c3e50;
+    color: var(--primary-color);
 }
 
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
-    max-width: 1200px;
+    padding: 0 20px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
 .product-card {
-    background: white;
-    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    text-align: center;
     position: relative;
-    cursor: pointer;
-    border: 1px solid #eee;
 }
 
-.product-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+/* Flavor-specific card accents */
+.product-card[data-flavor="ocean"] {
+    border-top: 4px solid #118AB2;
 }
 
-.product-image {
-    height: 180px;
-    overflow: hidden;
-    position: relative;
-    background-color: #f8f9fa;
+.product-card[data-flavor="rose"] {
+    border-top: 4px solid #FF6B6B;
 }
 
-.placeholder-img {
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, #f3f4f6, #e5e7eb);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #9ca3af;
-    font-size: 1rem;
+.product-card[data-flavor="orange"] {
+    border-top: 4px solid #FF9F1C;
 }
 
-.product-card h3 {
-    padding: 1.2rem 1.2rem 0.5rem;
-    font-size: 1.2rem;
-    color: #2c3e50;
-    font-weight: 600;
+.product-card[data-flavor="lavender"] {
+    border-top: 4px solid #9B5DE5;
 }
 
-.product-card p {
-    padding: 0 1.2rem 1rem;
-    color: #666;
-    font-size: 0.9rem;
-    line-height: 1.5;
+.product-card[data-flavor="vanilla"] {
+    border-top: 4px solid #FFE66D;
 }
 
+/* Flavor tag styling */
 .flavor-tag {
     display: inline-block;
-    padding: 0.25rem 0.8rem;
-    background: #f0f4f8;
-    color: #4a6fa5;
-    border-radius: 15px;
-    font-size: 0.75rem;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
     font-weight: 500;
-    margin: 0 1.2rem 1.2rem;
-    border: 1px solid #e2e8f0;
+    margin-top: 10px;
+    color: white;
 }
 
-/* Flavor-specific colors */
-[data-flavor="ocean"] .flavor-tag { background-color: #e6f0ff; color: #1a56db; border-color: #bfdbfe; }
-[data-flavor="rose"] .flavor-tag { background-color: #fdf2f8; color: #c026d3; border-color: #f5d0fe; }
-[data-flavor="orange"] .flavor-tag { background-color: #fff7ed; color: #ea580c; border-color: #fed7aa; }
-[data-flavor="lavender"] .flavor-tag { background-color: #f5f3ff; color: #7c3aed; border-color: #ddd6fe; }
-[data-flavor="vanilla"] .flavor-tag { background-color: #fefce8; color: #d97706; border-color: #fde68a; }
+/* Flavor tag colors */
+[data-flavor="ocean"] .flavor-tag { background-color: #118AB2; }
+[data-flavor="rose"] .flavor-tag { background-color: #FF6B6B; }
+[data-flavor="orange"] .flavor-tag { background-color: #FF9F1C; }
+[data-flavor="lavender"] .flavor-tag { background-color: #9B5DE5; }
+[data-flavor="vanilla"] .flavor-tag { 
+    background-color: #FFE66D; 
+    color: #333;
+}
 
 .product-card:hover {
     transform: translateY(-10px) scale(1.03);
