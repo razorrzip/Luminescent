@@ -745,7 +745,7 @@ nav {
 }
 
 .benefits-list li:before {
-    content: 'âœ“';
+    content: '✓';
     color: var(--accent-2);
     position: absolute;
     left: 0;
