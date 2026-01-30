@@ -1,4 +1,4 @@
-﻿/* Global Styles */
+/* Global Styles */
 :root {
     /* Vibrant color scheme inspired by the poster */
     --primary-color: #FF6B6B;
@@ -260,14 +260,18 @@ nav {
 
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 1.5rem;
-    max-width: 1400px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
     margin: 0 auto;
     justify-content: center;
 }
 
-.product-card {
+.product-card:nth-child(n+4) {
+    grid-column: span 1;
+}   
+
+/* Center the last row with 2 items */\n.product-card:nth-child(4),\n.product-card:nth-child(5) {\n    justify-self: center;\n}\n\n.product-card {
     background: rgba(255, 255, 255, 0.95);
     border-radius: 10px;
     overflow: hidden;
@@ -533,6 +537,23 @@ nav {
     background-color: var(--light-bg);
 }
 
+.contact-c.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.product-card:nth-child(n+4) {
+    grid-column: span 1;
+}
+
+.product-card:nth-child(4) {
+    grid-column: 2 / 3;
+}
+
 .contact-info h3 {
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
@@ -745,7 +766,7 @@ nav {
 }
 
 .benefits-list li:before {
-    content: 'âœ“';
+    content: '✓';
     color: var(--accent-2);
     position: absolute;
     left: 0;
@@ -816,8 +837,7 @@ footer::before {
 @media (max-width: 1200px) {
     .product-grid {
         grid-template-columns: repeat(5, 1fr);
-        max-width: 100%;
-        gap: 1rem;
+        max-width: 1000px;
     }
 }
 
@@ -858,14 +878,7 @@ footer::before {
         padding: 0 1rem;
     }
     
-    /* Center the last row with 2 items */
-.product-card:nth-child(4),
-.product-card:nth-child(5) {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.product-card {
+    /* Center the last row with 2 items */\n.product-card:nth-child(4),\n.product-card:nth-child(5) {\n    justify-self: center;\n}\n\n.product-card {
         max-width: 100%;
         margin: 0;
     }
@@ -873,9 +886,8 @@ footer::before {
 
 @media (max-width: 768px) {
     .product-grid {
-        grid-template-columns: repeat(5, 1fr);
-        gap: 0.5rem;
-        padding: 0 0.5rem;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
     }
 }
 
@@ -897,14 +909,7 @@ footer::before {
         margin: 0 auto;
     }
     
-    /* Center the last row with 2 items */
-.product-card:nth-child(4),
-.product-card:nth-child(5) {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.product-card {
+    /* Center the last row with 2 items */\n.product-card:nth-child(4),\n.product-card:nth-child(5) {\n    justify-self: center;\n}\n\n.product-card {
         max-width: 100%;
         margin: 0 auto;
     }
@@ -922,4 +927,3 @@ footer::before {
     color: #E2C08D;
     font-size: 3.5rem;  /* Slightly larger icon */
 }
-
