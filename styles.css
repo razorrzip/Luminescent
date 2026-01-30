@@ -74,9 +74,9 @@ nav {
 }
 
 .logo-img {
-    height: 60px;
+    height: 95px;
     width: auto;
-    max-width: 120px;
+    max-width: 200px;
     object-fit: contain;
     transition: var(--transition);
 }
@@ -260,22 +260,26 @@ nav {
 
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    padding: 0 20px;
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
+    justify-content: center;
 }
+
+.product-card:nth-child(n+4) {
+    grid-column: span 1;
+}   
 
 .product-card {
     background: rgba(255, 255, 255, 0.95);
-    border-radius: 15px;
+    border-radius: 10px;
     overflow: hidden;
-    box-shadow: var(--box-shadow);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: var(--transition);
     border: 1px solid rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(10px);
-    padding: 20px;
+    padding: 10px;
     text-align: center;
     position: relative;
 }
@@ -344,16 +348,17 @@ nav {
 }
 
 .placeholder-img {
-    width: 150px;
-    height: 150px;
-    margin: 0 auto 20px;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 10px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background: -webkit-linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
     display: flex;
     align-items: center;
     justify-content: center;
     color: #666;
-    font-size: 1.2rem;
+    font-size: 1rem;
     transition: var(--transition);
     position: relative;
     overflow: hidden;
@@ -363,7 +368,7 @@ nav {
 .placeholder-img::before {
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;
-    font-size: 3rem;
+    font-size: 2rem;
     opacity: 0.7;
 }
 
@@ -374,14 +379,16 @@ nav {
 [data-flavor="vanilla"] .placeholder-img::before { content: '\f5ff'; color: #E2C08D; }
 
 .product-card h3 {
-    padding: 1.5rem 1.5rem 0.5rem;
-    font-size: 1.4rem;
+    padding: 0.5rem 0.5rem 0.25rem;
+    font-size: 1rem;
     color: var(--primary-color);
 }
 
 .product-card p {
-    padding: 0 1.5rem 1.5rem;
+    padding: 0 0.5rem 0.5rem;
     color: #666;
+    font-size: 0.8rem;
+    margin: 0;
 }
 
 /* Benefits Section */
@@ -413,6 +420,7 @@ nav {
     margin-bottom: 1.5rem;
     background: var(--gradient);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     display: inline-block;
     padding: 15px;
@@ -529,13 +537,21 @@ nav {
     background-color: var(--light-bg);
 }
 
-.contact-container {
+.contact-c.product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 3rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    justify-content: center;
+}
+
+.product-card:nth-child(n+4) {
+    grid-column: span 1;
+}
+
+.product-card:nth-child(4) {
+    grid-column: 2 / 3;
 }
 
 .contact-info h3 {
@@ -818,6 +834,13 @@ footer::before {
 }
 
 /* Responsive Styles */
+@media (max-width: 1200px) {
+    .product-grid {
+        grid-template-columns: repeat(5, 1fr);
+        max-width: 1000px;
+    }
+}
+
 @media (max-width: 992px) {
     .nav-links {
         position: fixed;
@@ -850,7 +873,21 @@ footer::before {
     }
 
     .product-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+    
+    .product-card {
+        max-width: 100%;
+        margin: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
     }
 }
 
@@ -863,11 +900,30 @@ footer::before {
     .benefits h2,
     .contact h2,
     .about h2 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
-    .product-card {
-        max-width: 300px;
+    .product-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
         margin: 0 auto;
     }
+    
+    .product-card {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+}
+
+/* Update the flavor icons for the new placeholder */
+[data-flavor="lavender"] .placeholder-img2::before {
+    content: '\f75f';
+    color: #9B5DE5;
+    font-size: 3.5rem;  /* Slightly larger icon */
+}
+
+[data-flavor="vanilla"] .placeholder-img2::before {
+    content: '\f5ff';
+    color: #E2C08D;
+    font-size: 3.5rem;  /* Slightly larger icon */
 }
