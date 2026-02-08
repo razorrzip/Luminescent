@@ -151,12 +151,12 @@ nav {
 .hero {
     height: 100vh;
     background: linear-gradient(135deg, rgba(7, 59, 76, 0.9), rgba(17, 138, 178, 0.8)), 
-                url('https://source.unsplash.com/random/1920x1080/?candle,aromatherapy') no-repeat center center/cover;
+                url('kolase.jpg') no-repeat center center/cover;
     display: flex;
     align-items: center;
     text-align: center;
     color: var(--white);
-    padding: 0 20px;
+    padding: 120px 20px 20px 20px; /* Add top padding to account for navbar */
     position: relative;
     overflow: hidden;
 }
@@ -444,21 +444,21 @@ nav {
 /* About Section */
 .about {
     padding: 100px 0;
-    background: linear-gradient(135deg, var(--accent-3), var(--dark-blue));
+    background: linear-gradient(135deg, var(--accent-3), var(--dark-blue)), 
+                url('kolaseb&w.jpg') no-repeat center center/cover;
     color: var(--white);
     position: relative;
     overflow: hidden;
 }
 
-.about::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgcGF0dGVyblRyYW5zZm9ybT0icm90YXRlKDQ1KSI+PHJlY3Qgd2lkdGg9IjUwJSIgaGVpZ2h0PSI1MCUiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjcGF0dGVybikiLz48L3N2Zz4=');
-    opacity: 0.3;
+/* About Section */
+.about {
+    padding: 100px 0;
+    background: linear-gradient(135deg, var(--accent-3), var(--dark-blue)), 
+                url('kolaseb&w.jpg') no-repeat center center/cover;
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
 }
 
 .about-content {
