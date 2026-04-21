@@ -383,14 +383,18 @@ nav {
 }
 
 .product-img {
-    width: 100%;
-    height: 100%;
+    width: 85%;
+    height: 85%;
     object-fit: cover;
     object-position: center;
     transition: all 0.3s ease;
     border-radius: 8px;
-    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 1;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .product-card:hover .product-img {
