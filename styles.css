@@ -363,15 +363,6 @@ nav {
     background-color: #733116
 }
 
-.product-card:hover {
-    transform: translateY(-10px) scale(1.03);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-}
-
-.product-card:hover .placeholder-img {
-    transform: scale(1.1);
-}
-
 .product-image {
     height: 300px;
     background: transparent;
@@ -388,6 +379,11 @@ nav {
     object-position: center;
     transition: all 0.3s ease;
     border-radius: 8px;
+}
+
+.product-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
 .product-card:hover .product-img {
