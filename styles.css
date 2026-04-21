@@ -309,8 +309,8 @@ nav {
 }
 
 .product-card {
-    background: linear-gradient(135deg, rgba(188, 84, 42, 0.15), rgba(255, 107, 107, 0.1), rgba(17, 138, 178, 0.15));
-    backdrop-filter: blur(5px);
+    background: linear-gradient(135deg, rgba(188, 84, 42, 0.3), rgba(255, 107, 107, 0.25), rgba(17, 138, 178, 0.3));
+    backdrop-filter: blur(3px);
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
