@@ -1,7 +1,7 @@
 ﻿/* Global Styles */
 :root {
     /* Vibrant color scheme inspired by the poster */
-    --primary-color: rgb(188, 84, 42);
+    --primary-color: #FF6B6B;
     --secondary-color: #4ECDC4;
     --accent-1: #FFD166;
     --accent-2: #06D6A0;
@@ -76,7 +76,7 @@ header.transparent .nav-links a {
 
 header.transparent .nav-links a:hover,
 header.transparent .nav-links a.active {
-    color: rgb(188, 84, 42);
+    color: var(--primary-color);
 }
 
 header.transparent .hamburger span {
@@ -141,7 +141,7 @@ nav {
 
 .nav-links a:hover,
 .nav-links a.active {
-    color: rgb(188, 84, 42);
+    color: var(--primary-color);
 }
 
 .nav-links a::after {
@@ -149,7 +149,7 @@ nav {
     position: absolute;
     width: 0;
     height: 2px;
-    background: rgb(188, 84, 42);
+    background: var(--primary-color);
     bottom: -5px;
     left: 0;
     transition: var(--transition);
@@ -170,7 +170,7 @@ nav {
 .hamburger span {
     width: 25px;
     height: 3px;
-    background-color: rgb(188, 84, 42);
+    background-color: var(--primary-color);
     transition: var(--transition);
 }
 
@@ -295,7 +295,7 @@ nav {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    color: rgb(188, 84, 42);
+    color: var(--primary-color);
 }
 
 .product-grid {
@@ -411,7 +411,7 @@ nav {
 
 /* Flavor tag colors */
 [data-flavor="teh-keraton"] .flavor-tag { 
-    background-color: rgb(188, 84, 42); 
+    background-color: var(--primary-color); 
     color: white;
 }
 
@@ -460,13 +460,13 @@ nav {
 
 .benefit-item i {
     font-size: 2.5rem;
-    color: rgb(188, 84, 42);
+    color: var(--primary-color);
     margin-bottom: 1.5rem;
 }
 
 .benefit-item h3 {
     margin-bottom: 1rem;
-    color: rgb(188, 84, 42);
+    color: var(--primary-color);
 }
 
 /* About Section */
@@ -531,7 +531,7 @@ nav {
 }
 
 .contact-item i {
-    color: rgb(188, 84, 42);
+    color: var(--primary-color);
     font-size: 1.3rem;
     width: 24px;
     text-align: center;
@@ -551,7 +551,7 @@ nav {
 }
 
 .simple-contact .social-links a:hover {
-    color: rgb(188, 84, 42);
+    color: var(--primary-color);
     transform: translateY(-3px);
 }
 
@@ -564,7 +564,7 @@ nav {
 .contact-info h3 {
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
-    color: rgb(188, 84, 42);
+    color: var(--primary-color);
 }
 
 .contact-info p {
@@ -575,7 +575,7 @@ nav {
 }
 
 .contact-info i {
-    color: rgb(188, 84, 42);
+    color: var(--primary-color);
     width: 20px;
 }
 
@@ -591,7 +591,7 @@ nav {
     justify-content: center;
     width: 40px;
     height: 40px;
-    background-color: rgb(188, 84, 42);
+    background-color: var(--primary-color);
     color: white;
     border-radius: 50%;
     transition: var(--transition);
@@ -621,7 +621,7 @@ nav {
 .contact-form input:focus,
 .contact-form textarea:focus {
     outline: none;
-    border-color: rgb(188, 84, 42);
+    border-color: var(--primary-color);
     box-shadow: 0 0 0 3px rgba(134, 169, 231, 0.3);
 }
 
@@ -631,7 +631,7 @@ nav {
 }
 
 .submit-btn {
-    background-color: rgb(188, 84, 42);
+    background-color: var(--primary-color);
     color: white;
     border: none;
     padding: 12px 30px;
@@ -699,7 +699,7 @@ nav {
 }
 
 .close-modal:hover {
-    color: rgb(188, 84, 42);
+    color: var(--primary-color);
 }
 
 .modal-body {
@@ -754,7 +754,7 @@ nav {
 }
 
 .flavor-benefits h3 {
-    color: rgb(188, 84, 42);
+    color: var(--primary-color);
     margin-bottom: 15px;
     font-size: 1.3rem;
 }
