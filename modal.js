@@ -44,7 +44,7 @@ function openModal(flavorId) {
     
     flavorIcon.style.background = `linear-gradient(135deg, ${flavor.color}20, ${flavor.color}40)`;
     flavorIcon.style.color = flavor.color;
-    flavorIcon.innerHTML = `<i class="fas" style="font-size: 4rem; color: ${flavor.color}">${iconMap[flavorId]}</i>`;
+    flavorIcon.innerHTML = `<img src="bagus1.jpeg" alt="${flavor.name}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">`;
     
     // Update benefits list
     benefitsList.innerHTML = '';

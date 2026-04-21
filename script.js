@@ -1,4 +1,21 @@
 // Mobile menu toggle
+// Navbar transparency on scroll
+let lastScrollTop = 0;
+
+window.addEventListener('scroll', () => {
+    const header = document.querySelector('header');
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+    // Add transparent class when scrolling down, remove when scrolling up
+    if (scrollTop > lastScrollTop && scrollTop > 50) {
+        header.classList.add('transparent');
+    } else {
+        header.classList.remove('transparent');
+    }
+    
+    lastScrollTop = scrollTop;
+});
+
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 const links = document.querySelectorAll('.nav-links li');
