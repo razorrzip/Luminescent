@@ -309,7 +309,7 @@ nav {
 }
 
 .product-card {
-    background-color: rgba(188, 84, 42, 0.08);
+    background-color: rgba(188, 84, 42, 0.15);
     backdrop-filter: blur(2px);
     border-radius: 20px;
     overflow: hidden;
